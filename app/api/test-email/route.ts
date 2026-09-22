@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server";
 import {
-  testEmailConfiguration,
-  sendConfirmationEmail,
-  sendPractitionerNotification,
+  verifyEmailConfig,
+  sendClientBookingConfirmation,
+  sendPractitionerBookingNotification,
 } from "@/lib/email";
 import { isAuthorizedInternalRequest } from "@/lib/security";
 
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     console.log("GET /api/test-email - Testing email configuration...");
 
     // Test email configuration
-    const configTest = await testEmailConfiguration();
+    const configTest = await verifyEmailConfig();
 
     if (!configTest.success) {
       return NextResponse.json(
@@ -72,24 +72,24 @@ export async function POST(request: NextRequest) {
     const testBookingData = {
       clientName: body.clientName || "Test Client",
       clientEmail: testEmail,
-      clientPhone: body.clientPhone || "+61 2 1234 5678",
-      service: body.service || "Anxiety & Stress Relief",
+      clientPhone: body.clientPhone || "+971 56 604 1875",
+      service: body.service || "Lama Fera Healing",
       date: body.date || "2024-02-15",
       time: body.time || "10:00",
       sessionType: body.sessionType || "in-person",
-      amount: body.amount || 120,
-      currency: body.currency || "aud",
+      amount: body.amount || 150,
+      currency: body.currency || "aed",
       paymentIntentId: body.paymentIntentId || "pi_test_123456789",
     };
 
     console.log("Sending test email to:", testEmail);
 
     // Send confirmation email
-    const clientResult = await sendConfirmationEmail(testBookingData);
+    const clientResult = await sendClientBookingConfirmation(testBookingData);
     console.log("Client email result:", clientResult);
 
     // Send practitioner notification
-    const practitionerResult = await sendPractitionerNotification(
+    const practitionerResult = await sendPractitionerBookingNotification(
       testBookingData
     );
     console.log("Practitioner email result:", practitionerResult);
