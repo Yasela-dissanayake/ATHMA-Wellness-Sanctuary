@@ -80,6 +80,7 @@ export async function POST(request: NextRequest) {
       amount: body.amount || 150,
       currency: body.currency || "aed",
       paymentIntentId: body.paymentIntentId || "pi_test_123456789",
+      concerns: body.concerns || "Test booking - no specific concerns",
     };
 
     console.log("Sending test email to:", testEmail);
