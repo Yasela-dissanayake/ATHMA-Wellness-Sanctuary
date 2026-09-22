@@ -1,1 +1,1 @@
-# MindandSoul-Hypnotheraphy
+# ATHMA-Wellness-Sanctuary

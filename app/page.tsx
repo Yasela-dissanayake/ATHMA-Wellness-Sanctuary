@@ -1017,25 +1017,29 @@ export default function HomePage() {
               <h4 className="font-semibold">Quick Links</h4>
               <div className="space-y-2 text-sm">
                 <Link
-                  href="#" onClick={(e) => e.preventDefault()}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="block text-stone-300 hover:text-white transition-colors"
                 >
                   About Angela
                 </Link>
                 <Link
-                  href="#" onClick={(e) => e.preventDefault()}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="block text-stone-300 hover:text-white transition-colors"
                 >
                   Services
                 </Link>
                 <Link
-                  href="#" onClick={(e) => e.preventDefault()}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="block text-stone-300 hover:text-white transition-colors"
                 >
                   Testimonials
                 </Link>
                 <Link
-                  href="#" onClick={(e) => e.preventDefault()}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="block text-stone-300 hover:text-white transition-colors"
                 >
                   Contact
@@ -1056,12 +1060,20 @@ export default function HomePage() {
           <Separator className="my-8 bg-stone-700" />
 
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-stone-400">
-            <div>© 2025 ATHMA Wellness Sanctuary. All rights reserved.</div>
+            <div>© 2026 ATHMA Wellness Sanctuary. All rights reserved.</div>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition-colors">
+              <Link
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="hover:text-white transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition-colors">
+              <Link
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="hover:text-white transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
